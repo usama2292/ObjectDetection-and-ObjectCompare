@@ -1,0 +1,10 @@
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\bin\Debug\ObjectIdentification.exe.config
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\bin\Debug\ObjectIdentification.exe
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\bin\Debug\ObjectIdentification.pdb
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.csprojResolveAssemblyReference.cache
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Properties.Resources.resources
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.csproj.GenerateResource.Cache
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.exe
+c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.pdb
+C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Form_ObjIdentifier.resources
+C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Form2.resources
