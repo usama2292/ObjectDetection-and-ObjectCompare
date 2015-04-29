@@ -50,19 +50,25 @@
     <Compile Include="Object Identifier.Designer.cs">
       <DependentUpon>Object Identifier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Image Compare.cs">
+    <Compile Include="Face Detection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Image Compare.Designer.cs">
-      <DependentUpon>Image Compare.cs</DependentUpon>
+    <Compile Include="Face Detection.Designer.cs">
+      <DependentUpon>Face Detection.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Object Identifier.resx">
       <DependentUpon>Object Identifier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Image Compare.resx">
-      <DependentUpon>Image Compare.cs</DependentUpon>
+    <EmbeddedResource Include="Face Detection.resx">
+      <DependentUpon>Face Detection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

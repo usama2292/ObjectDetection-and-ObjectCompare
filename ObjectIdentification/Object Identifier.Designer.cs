@@ -35,18 +35,19 @@
             this.picButton_clockwise = new System.Windows.Forms.PictureBox();
             this.picButton_anticlockwise = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picButton_clockwise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picButton_anticlockwise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonUpload
             // 
-            this.buttonUpload.Location = new System.Drawing.Point(230, 242);
+            this.buttonUpload.Location = new System.Drawing.Point(13, 242);
             this.buttonUpload.Name = "buttonUpload";
-            this.buttonUpload.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpload.Size = new System.Drawing.Size(88, 33);
             this.buttonUpload.TabIndex = 0;
             this.buttonUpload.Text = "Upload";
             this.buttonUpload.UseVisualStyleBackColor = true;
@@ -54,9 +55,9 @@
             // 
             // buttonScan
             // 
-            this.buttonScan.Location = new System.Drawing.Point(12, 242);
+            this.buttonScan.Location = new System.Drawing.Point(309, 175);
             this.buttonScan.Name = "buttonScan";
-            this.buttonScan.Size = new System.Drawing.Size(75, 23);
+            this.buttonScan.Size = new System.Drawing.Size(75, 50);
             this.buttonScan.TabIndex = 1;
             this.buttonScan.Text = "Scan";
             this.buttonScan.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(13, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 203);
+            this.pictureBox1.Size = new System.Drawing.Size(290, 213);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -73,7 +74,7 @@
             // picButton_clockwise
             // 
             this.picButton_clockwise.ImageLocation = "F:\\6th Semester\\VP Files\\clockwise.jpg";
-            this.picButton_clockwise.Location = new System.Drawing.Point(124, 235);
+            this.picButton_clockwise.Location = new System.Drawing.Point(124, 242);
             this.picButton_clockwise.Name = "picButton_clockwise";
             this.picButton_clockwise.Size = new System.Drawing.Size(33, 30);
             this.picButton_clockwise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +85,7 @@
             // picButton_anticlockwise
             // 
             this.picButton_anticlockwise.ImageLocation = "F:\\6th Semester\\VP Files\\anti clockwise.jpg";
-            this.picButton_anticlockwise.Location = new System.Drawing.Point(163, 235);
+            this.picButton_anticlockwise.Location = new System.Drawing.Point(163, 242);
             this.picButton_anticlockwise.Name = "picButton_anticlockwise";
             this.picButton_anticlockwise.Size = new System.Drawing.Size(35, 30);
             this.picButton_anticlockwise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,18 +95,23 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(336, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(386, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(292, 203);
+            this.pictureBox2.Size = new System.Drawing.Size(290, 213);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // pictureBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(336, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 20);
-            this.textBox1.TabIndex = 6;
+            this.pictureBox3.ImageLocation = "C:\\Users\\Dell\\Documents\\Visual Studio 2013\\Projects\\ObjectIdentification\\VP Files" +
+    "\\Home.png";
+            this.pictureBox3.Location = new System.Drawing.Point(631, 242);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Form_ObjIdentifier
             // 
@@ -113,8 +119,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(648, 275);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(688, 297);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.picButton_anticlockwise);
             this.Controls.Add(this.picButton_clockwise);
@@ -127,8 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picButton_clockwise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picButton_anticlockwise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,7 +146,7 @@
         private System.Windows.Forms.PictureBox picButton_clockwise;
         private System.Windows.Forms.PictureBox picButton_anticlockwise;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

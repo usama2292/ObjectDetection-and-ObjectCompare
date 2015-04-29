@@ -1,6 +1,6 @@
 ﻿namespace ObjectIdentification
 {
-    partial class Form2
+    partial class Face_Detection
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Face_Detection));
             this.IC_image1 = new System.Windows.Forms.PictureBox();
             this.IC_image2 = new System.Windows.Forms.PictureBox();
             this.IC_UploadImg1 = new System.Windows.Forms.Button();
-            this.IC_UploadImg2 = new System.Windows.Forms.Button();
             this.IC_clockwise_img1 = new System.Windows.Forms.PictureBox();
             this.IC_anticlockwise_img1 = new System.Windows.Forms.PictureBox();
-            this.IC_clockwise_img2 = new System.Windows.Forms.PictureBox();
-            this.IC_anticlockwise_img2 = new System.Windows.Forms.PictureBox();
-            this.IC_buttonCompare = new System.Windows.Forms.Button();
+            this.IC_buttonDetect = new System.Windows.Forms.Button();
+            this.FaceHome = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.IC_image1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_image2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).BeginInit();
             this.SuspendLayout();
             // 
             // IC_image1
@@ -68,21 +65,11 @@
             // 
             this.IC_UploadImg1.Location = new System.Drawing.Point(13, 242);
             this.IC_UploadImg1.Name = "IC_UploadImg1";
-            this.IC_UploadImg1.Size = new System.Drawing.Size(75, 23);
+            this.IC_UploadImg1.Size = new System.Drawing.Size(93, 30);
             this.IC_UploadImg1.TabIndex = 2;
             this.IC_UploadImg1.Text = "Upload";
             this.IC_UploadImg1.UseVisualStyleBackColor = true;
             this.IC_UploadImg1.Click += new System.EventHandler(this.IC_UploadImg1_Click);
-            // 
-            // IC_UploadImg2
-            // 
-            this.IC_UploadImg2.Location = new System.Drawing.Point(601, 242);
-            this.IC_UploadImg2.Name = "IC_UploadImg2";
-            this.IC_UploadImg2.Size = new System.Drawing.Size(75, 23);
-            this.IC_UploadImg2.TabIndex = 3;
-            this.IC_UploadImg2.Text = "Upload";
-            this.IC_UploadImg2.UseVisualStyleBackColor = true;
-            this.IC_UploadImg2.Click += new System.EventHandler(this.IC_UploadImg2_Click);
             // 
             // IC_clockwise_img1
             // 
@@ -94,6 +81,7 @@
             this.IC_clockwise_img1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.IC_clockwise_img1.TabIndex = 4;
             this.IC_clockwise_img1.TabStop = false;
+            this.IC_clockwise_img1.Click += new System.EventHandler(this.IC_clockwise_img1_Click);
             // 
             // IC_anticlockwise_img1
             // 
@@ -105,62 +93,50 @@
             this.IC_anticlockwise_img1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.IC_anticlockwise_img1.TabIndex = 5;
             this.IC_anticlockwise_img1.TabStop = false;
+            this.IC_anticlockwise_img1.Click += new System.EventHandler(this.IC_anticlockwise_img1_Click);
             // 
-            // IC_clockwise_img2
+            // IC_buttonDetect
             // 
-            this.IC_clockwise_img2.ImageLocation = "C:\\Users\\Dell\\Documents\\Visual Studio 2013\\Projects\\ObjectIdentification\\VP Files" +
-    "\\clockwise.jpg";
-            this.IC_clockwise_img2.Location = new System.Drawing.Point(492, 242);
-            this.IC_clockwise_img2.Name = "IC_clockwise_img2";
-            this.IC_clockwise_img2.Size = new System.Drawing.Size(33, 30);
-            this.IC_clockwise_img2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IC_clockwise_img2.TabIndex = 6;
-            this.IC_clockwise_img2.TabStop = false;
+            this.IC_buttonDetect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IC_buttonDetect.Location = new System.Drawing.Point(309, 174);
+            this.IC_buttonDetect.Name = "IC_buttonDetect";
+            this.IC_buttonDetect.Size = new System.Drawing.Size(71, 51);
+            this.IC_buttonDetect.TabIndex = 8;
+            this.IC_buttonDetect.Text = "Detect";
+            this.IC_buttonDetect.UseVisualStyleBackColor = true;
             // 
-            // IC_anticlockwise_img2
+            // FaceHome
             // 
-            this.IC_anticlockwise_img2.ImageLocation = "C:\\Users\\Dell\\Documents\\Visual Studio 2013\\Projects\\ObjectIdentification\\VP Files" +
-    "\\anti clockwise.jpg";
-            this.IC_anticlockwise_img2.Location = new System.Drawing.Point(531, 242);
-            this.IC_anticlockwise_img2.Name = "IC_anticlockwise_img2";
-            this.IC_anticlockwise_img2.Size = new System.Drawing.Size(33, 30);
-            this.IC_anticlockwise_img2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IC_anticlockwise_img2.TabIndex = 7;
-            this.IC_anticlockwise_img2.TabStop = false;
+            this.FaceHome.ImageLocation = "C:\\Users\\Dell\\Documents\\Visual Studio 2013\\Projects\\ObjectIdentification\\VP Files" +
+    "\\Home.png";
+            this.FaceHome.Location = new System.Drawing.Point(631, 242);
+            this.FaceHome.Name = "FaceHome";
+            this.FaceHome.Size = new System.Drawing.Size(45, 43);
+            this.FaceHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FaceHome.TabIndex = 9;
+            this.FaceHome.TabStop = false;
+            this.FaceHome.Click += new System.EventHandler(this.FaceHome_Click_1);
             // 
-            // IC_buttonCompare
-            // 
-            this.IC_buttonCompare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IC_buttonCompare.Location = new System.Drawing.Point(309, 174);
-            this.IC_buttonCompare.Name = "IC_buttonCompare";
-            this.IC_buttonCompare.Size = new System.Drawing.Size(71, 51);
-            this.IC_buttonCompare.TabIndex = 8;
-            this.IC_buttonCompare.Text = "Compare";
-            this.IC_buttonCompare.UseVisualStyleBackColor = true;
-            // 
-            // Form2
+            // Face_Detection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(688, 297);
-            this.Controls.Add(this.IC_buttonCompare);
-            this.Controls.Add(this.IC_anticlockwise_img2);
-            this.Controls.Add(this.IC_clockwise_img2);
+            this.Controls.Add(this.FaceHome);
+            this.Controls.Add(this.IC_buttonDetect);
             this.Controls.Add(this.IC_anticlockwise_img1);
             this.Controls.Add(this.IC_clockwise_img1);
-            this.Controls.Add(this.IC_UploadImg2);
             this.Controls.Add(this.IC_UploadImg1);
             this.Controls.Add(this.IC_image2);
             this.Controls.Add(this.IC_image1);
-            this.Name = "Form2";
-            this.Text = "Image Comparer";
+            this.Name = "Face_Detection";
+            this.Text = "Face Detector";
             ((System.ComponentModel.ISupportInitialize)(this.IC_image1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_image2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,11 +146,9 @@
         private System.Windows.Forms.PictureBox IC_image1;
         private System.Windows.Forms.PictureBox IC_image2;
         private System.Windows.Forms.Button IC_UploadImg1;
-        private System.Windows.Forms.Button IC_UploadImg2;
         private System.Windows.Forms.PictureBox IC_clockwise_img1;
         private System.Windows.Forms.PictureBox IC_anticlockwise_img1;
-        private System.Windows.Forms.PictureBox IC_clockwise_img2;
-        private System.Windows.Forms.PictureBox IC_anticlockwise_img2;
-        private System.Windows.Forms.Button IC_buttonCompare;
+        private System.Windows.Forms.Button IC_buttonDetect;
+        private System.Windows.Forms.PictureBox FaceHome;
     }
 }

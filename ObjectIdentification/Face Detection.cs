@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ObjectIdentification
 {
-    public partial class Form2 : Form
+    public partial class Face_Detection : Form
     {
-        public Form2()
+        public Face_Detection()
         {
             InitializeComponent();
         }
@@ -35,6 +35,27 @@ namespace ObjectIdentification
             }
         }
 
+        private void FaceHome_Click_1(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            var FormLoad = new StartUp();
+            FormLoad.Show();
+        }
+
+        private void IC_clockwise_img1_Click(object sender, EventArgs e)
+        {
+            Image img = IC_image1.Image;
+            img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            IC_image1.Image = img;
+        }
+
+        private void IC_anticlockwise_img1_Click(object sender, EventArgs e)
+        {
+            Image img = IC_image1.Image;
+            img.RotateFlip(RotateFlipType.Rotate270FlipNone);
+            IC_image1.Image = img;
+        }
 
 
     }

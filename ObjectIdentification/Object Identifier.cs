@@ -42,5 +42,12 @@ namespace ObjectIdentification
             pictureBox1.Image = img;
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var FormLoad = new StartUp();
+            FormLoad.Show();
+        }
+
     }
 }

@@ -7,4 +7,5 @@ c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectI
 c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.exe
 c:\users\dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.pdb
 C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Form_ObjIdentifier.resources
-C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Form2.resources
+C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.StartUp.resources
+C:\Users\Dell\documents\visual studio 2013\Projects\ObjectIdentification\ObjectIdentification\obj\Debug\ObjectIdentification.Face_Detection.resources
