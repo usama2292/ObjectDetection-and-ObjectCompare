@@ -28,38 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Face_Detection));
-            this.IC_image1 = new System.Windows.Forms.PictureBox();
-            this.IC_image2 = new System.Windows.Forms.PictureBox();
             this.IC_UploadImg1 = new System.Windows.Forms.Button();
             this.IC_clockwise_img1 = new System.Windows.Forms.PictureBox();
             this.IC_anticlockwise_img1 = new System.Windows.Forms.PictureBox();
             this.IC_buttonDetect = new System.Windows.Forms.Button();
             this.FaceHome = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_image1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_image2)).BeginInit();
+            this.inputImage = new Emgu.CV.UI.ImageBox();
+            this.outputImage = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outputImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // IC_image1
-            // 
-            this.IC_image1.Location = new System.Drawing.Point(12, 12);
-            this.IC_image1.Name = "IC_image1";
-            this.IC_image1.Size = new System.Drawing.Size(290, 213);
-            this.IC_image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IC_image1.TabIndex = 0;
-            this.IC_image1.TabStop = false;
-            // 
-            // IC_image2
-            // 
-            this.IC_image2.Location = new System.Drawing.Point(386, 12);
-            this.IC_image2.Name = "IC_image2";
-            this.IC_image2.Size = new System.Drawing.Size(290, 213);
-            this.IC_image2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IC_image2.TabIndex = 1;
-            this.IC_image2.TabStop = false;
             // 
             // IC_UploadImg1
             // 
@@ -98,12 +81,13 @@
             // IC_buttonDetect
             // 
             this.IC_buttonDetect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IC_buttonDetect.Location = new System.Drawing.Point(309, 174);
+            this.IC_buttonDetect.Location = new System.Drawing.Point(307, 174);
             this.IC_buttonDetect.Name = "IC_buttonDetect";
             this.IC_buttonDetect.Size = new System.Drawing.Size(71, 51);
             this.IC_buttonDetect.TabIndex = 8;
             this.IC_buttonDetect.Text = "Detect";
             this.IC_buttonDetect.UseVisualStyleBackColor = true;
+            this.IC_buttonDetect.Click += new System.EventHandler(this.IC_buttonDetect_Click);
             // 
             // FaceHome
             // 
@@ -117,38 +101,56 @@
             this.FaceHome.TabStop = false;
             this.FaceHome.Click += new System.EventHandler(this.FaceHome_Click_1);
             // 
+            // inputImage
+            // 
+            this.inputImage.Location = new System.Drawing.Point(13, 13);
+            this.inputImage.Name = "inputImage";
+            this.inputImage.Size = new System.Drawing.Size(290, 212);
+            this.inputImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inputImage.TabIndex = 2;
+            this.inputImage.TabStop = false;
+            // 
+            // outputImage
+            // 
+            this.outputImage.Location = new System.Drawing.Point(384, 13);
+            this.outputImage.Name = "outputImage";
+            this.outputImage.Size = new System.Drawing.Size(277, 212);
+            this.outputImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.outputImage.TabIndex = 2;
+            this.outputImage.TabStop = false;
+            // 
             // Face_Detection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(688, 297);
+            this.Controls.Add(this.outputImage);
+            this.Controls.Add(this.inputImage);
             this.Controls.Add(this.FaceHome);
             this.Controls.Add(this.IC_buttonDetect);
             this.Controls.Add(this.IC_anticlockwise_img1);
             this.Controls.Add(this.IC_clockwise_img1);
             this.Controls.Add(this.IC_UploadImg1);
-            this.Controls.Add(this.IC_image2);
-            this.Controls.Add(this.IC_image1);
             this.Name = "Face_Detection";
             this.Text = "Face Detector";
-            ((System.ComponentModel.ISupportInitialize)(this.IC_image1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IC_image2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outputImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox IC_image1;
-        private System.Windows.Forms.PictureBox IC_image2;
         private System.Windows.Forms.Button IC_UploadImg1;
         private System.Windows.Forms.PictureBox IC_clockwise_img1;
         private System.Windows.Forms.PictureBox IC_anticlockwise_img1;
         private System.Windows.Forms.Button IC_buttonDetect;
         private System.Windows.Forms.PictureBox FaceHome;
+        private Emgu.CV.UI.ImageBox inputImage;
+        private Emgu.CV.UI.ImageBox outputImage;
     }
 }

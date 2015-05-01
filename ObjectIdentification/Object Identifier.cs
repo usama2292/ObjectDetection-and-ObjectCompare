@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using Emgu.CV;
+using Emgu.Util;
+using Emgu.CV.Structure;
+using Emgu.CV.CvEnum;
+using Emgu.CV.UI;
 
 namespace ObjectIdentification
 {
     public partial class Form_ObjIdentifier : Form
     {
+        Image <Bgr,Byte>img;
         public Form_ObjIdentifier()
         {
             InitializeComponent();
@@ -23,23 +29,22 @@ namespace ObjectIdentification
             OpenFileDialog uploadPic = new OpenFileDialog();
             if(uploadPic.ShowDialog()==DialogResult.OK)
             {
-                pictureBox1.ImageLocation = uploadPic.FileName;
+                OI_inputImage.ImageLocation = uploadPic.FileName;
+                img = new Image<Bgr, byte>(uploadPic.FileName);
             }
 
         }
 
         private void picButton_clockwise_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
-            img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-            pictureBox1.Image = img;
+            img = img.Rotate(90, new Bgr(Color.Black));
+            OI_inputImage.Image = img;
         }
 
         private void picButton_anticlockwise_Click(object sender, EventArgs e)
         {
-            Image img = pictureBox1.Image;
-            img.RotateFlip(RotateFlipType.Rotate270FlipNone);
-            pictureBox1.Image = img;
+            img = img.Rotate(-90, new Bgr(Color.Black));
+            OI_inputImage.Image = img;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
