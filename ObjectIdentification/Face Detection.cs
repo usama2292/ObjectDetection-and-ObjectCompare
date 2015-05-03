@@ -75,9 +75,14 @@ namespace ObjectIdentification
             MCvAvgComp[] faceArr = faceDetect.Detect(grayImage, 1.4, 5, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, Size.Empty, Size.Empty);
             MCvAvgComp[] eyeArr = eyeDetect.Detect(grayImage, 1.4,15, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, Size.Empty, Size.Empty);
 
+            Rectangle one = new Rectangle(faceArr[0].rect.X,faceArr[0].rect.Y,faceArr[0].rect.Width,faceArr[0].rect.Height);
+            testfaceIMG.Image = originalImage.Bitmap.Clone(one, System.Drawing.Imaging.PixelFormat.DontCare);
+
+
             foreach (MCvAvgComp detection in faceArr)
             {
                 originalImage.Draw(detection.rect, new Bgr(Color.Red), 2);
+
             }
 
             foreach (MCvAvgComp detection in eyeArr)

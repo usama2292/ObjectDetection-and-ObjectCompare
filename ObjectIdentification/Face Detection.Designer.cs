@@ -37,11 +37,13 @@
             this.FaceHome = new System.Windows.Forms.PictureBox();
             this.inputImage = new Emgu.CV.UI.ImageBox();
             this.outputImage = new Emgu.CV.UI.ImageBox();
+            this.testfaceIMG = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.IC_clockwise_img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IC_anticlockwise_img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outputImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testfaceIMG)).BeginInit();
             this.SuspendLayout();
             // 
             // IC_UploadImg1
@@ -119,12 +121,22 @@
             this.outputImage.TabIndex = 2;
             this.outputImage.TabStop = false;
             // 
+            // testfaceIMG
+            // 
+            this.testfaceIMG.Location = new System.Drawing.Point(384, 232);
+            this.testfaceIMG.Name = "testfaceIMG";
+            this.testfaceIMG.Size = new System.Drawing.Size(125, 141);
+            this.testfaceIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.testfaceIMG.TabIndex = 10;
+            this.testfaceIMG.TabStop = false;
+            // 
             // Face_Detection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(688, 297);
+            this.ClientSize = new System.Drawing.Size(688, 385);
+            this.Controls.Add(this.testfaceIMG);
             this.Controls.Add(this.outputImage);
             this.Controls.Add(this.inputImage);
             this.Controls.Add(this.FaceHome);
@@ -139,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FaceHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outputImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testfaceIMG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +165,6 @@
         private System.Windows.Forms.PictureBox FaceHome;
         private Emgu.CV.UI.ImageBox inputImage;
         private Emgu.CV.UI.ImageBox outputImage;
+        private System.Windows.Forms.PictureBox testfaceIMG;
     }
 }
