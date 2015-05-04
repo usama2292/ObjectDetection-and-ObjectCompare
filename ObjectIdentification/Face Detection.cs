@@ -22,8 +22,8 @@ namespace ObjectIdentification
         Image<Gray, Byte> grayImage;
         Image<Bgr, Byte> blankImage;
 
-        HaarCascade faceDetect;
-        HaarCascade eyeDetect;
+        CascadeClassifier faceDetect;
+        CascadeClassifier eyeDetect;
 
 
 
@@ -65,30 +65,32 @@ namespace ObjectIdentification
 
         private void IC_buttonDetect_Click(object sender, EventArgs e)
         {
+            
             grayImage = originalImage.Convert<Gray, Byte>();
             outputImage.Image = blankImage;
-            faceDetect = new HaarCascade(@"C:\Emgu\emgucv-windows-universal-cuda 2.4.10.1940\opencv\data\haarcascades\haarcascade_frontalface_default.xml");
-            eyeDetect = new HaarCascade(@"C:\Emgu\emgucv-windows-universal-cuda 2.4.10.1940\opencv\data\haarcascades\haarcascade_eye.xml");
+            faceDetect = new CascadeClassifier(@"C:\Emgu\emgucv-windows-universal-cuda 2.4.10.1940\opencv\data\haarcascades\haarcascade_frontalface_default.xml");
+            eyeDetect = new CascadeClassifier(@"C:\Emgu\emgucv-windows-universal-cuda 2.4.10.1940\opencv\data\haarcascades\haarcascade_eye.xml");
 
             Application.DoEvents();
+            Rectangle[] faceArr = faceDetect.DetectMultiScale(grayImage, 1.2, 5, Size.Empty, Size.Empty);
+            //Rectangle[] eyeArr = faceDetect.DetectMultiScale(grayImage, 1.1, 5, Size.Empty, Size.Empty);
 
-            MCvAvgComp[] faceArr = faceDetect.Detect(grayImage, 1.4, 5, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, Size.Empty, Size.Empty);
-            MCvAvgComp[] eyeArr = eyeDetect.Detect(grayImage, 1.4,15, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, Size.Empty, Size.Empty);
+          
+            blankImage = new Image<Bgr,byte>(originalImage.Bitmap.Clone(faceArr[0], System.Drawing.Imaging.PixelFormat.DontCare));
+            testfaceIMG.Image=originalImage.Bitmap.Clone(faceArr[0], System.Drawing.Imaging.PixelFormat.DontCare);
 
-            Rectangle one = new Rectangle(faceArr[0].rect.X,faceArr[0].rect.Y,faceArr[0].rect.Width,faceArr[0].rect.Height);
-            testfaceIMG.Image = originalImage.Bitmap.Clone(one, System.Drawing.Imaging.PixelFormat.DontCare);
+            
 
-
-            foreach (MCvAvgComp detection in faceArr)
+            foreach (Rectangle detection in faceArr)
             {
-                originalImage.Draw(detection.rect, new Bgr(Color.Red), 2);
+                originalImage.Draw(detection, new Bgr(Color.Red), 2);
 
             }
 
-            foreach (MCvAvgComp detection in eyeArr)
-            {
-                originalImage.Draw(detection.rect, new Bgr(Color.Blue), 2);
-            }
+            //foreach (Rectangle detection in eyeArr)
+            //{
+            //    originalImage.Draw(detection, new Bgr(Color.Blue), 2);
+            //}
 
             outputImage.Image = originalImage;
         }

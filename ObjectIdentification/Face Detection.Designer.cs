@@ -123,7 +123,7 @@
             // 
             // testfaceIMG
             // 
-            this.testfaceIMG.Location = new System.Drawing.Point(384, 232);
+            this.testfaceIMG.Location = new System.Drawing.Point(12, 298);
             this.testfaceIMG.Name = "testfaceIMG";
             this.testfaceIMG.Size = new System.Drawing.Size(125, 141);
             this.testfaceIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(688, 385);
+            this.ClientSize = new System.Drawing.Size(708, 451);
             this.Controls.Add(this.testfaceIMG);
             this.Controls.Add(this.outputImage);
             this.Controls.Add(this.inputImage);
